@@ -4,6 +4,7 @@ Apache Kafka is an open-source, distributed event streaming platform designed to
 It was originally developed by LinkedIn and is now part of the Apache Software Foundation. Here’s a more detailed definition:
 
 #Key Features of Kafka:
+
 1.Distributed: Kafka runs as a cluster on one or more servers, providing high availability and fault tolerance.
 
 2.Scalable: Kafka can scale horizontally by adding more brokers (servers) to the cluster.
