@@ -1,4 +1,5 @@
 #Definition 
+
 Apache Kafka is an open-source, distributed event streaming platform designed to handle high-throughput, real-time data feeds. 
 It was originally developed by LinkedIn and is now part of the Apache Software Foundation. Here’s a more detailed definition:
 
@@ -16,6 +17,7 @@ It was originally developed by LinkedIn and is now part of the Apache Software F
 6.Publish/Subscribe Messaging: Kafka uses a publish/subscribe model where producers send messages to topics, and consumers subscribe to these topics to receive messages.
 
 #Core Concepts
+
 Producer: An application that sends messages to Kafka topics.
 
 Consumer: An application that reads messages from Kafka topics.
@@ -29,6 +31,7 @@ Broker: A Kafka server that stores data and serves client requests. A Kafka clus
 Zookeeper: A distributed coordination service used by Kafka to manage cluster metadata and leader election.
 
 #Use Cases
+
 1.Real-time Data Pipelines: Kafka is used to build real-time data pipelines for processing and moving data between systems.
 
 2.Event Sourcing: Kafka is used to capture changes to the state of an application, representing each change as an event.
@@ -54,6 +57,7 @@ Brokers: Servers in the Kafka cluster that store data and serve clients.
 Zookeeper: Used for managing and coordinating the Kafka brokers.
 
 #Example
+
 Producer sends messages to a Kafka topic, specifying the topic and partition.
 
 Kafka brokers store messages in partitions, ensuring fault tolerance and high availability through replication.
