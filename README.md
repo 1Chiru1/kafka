@@ -65,62 +65,69 @@ Kafka’s robustness, scalability, and ability to handle high-throughput data st
 Here are the basic steps to set up and use Kafka:
 
 1.Download and Install Kafka
-   Download Kafka:
+Download Kafka:
 
 Go to the Apache Kafka downloads[ https://kafka.apache.org/downloads ] page and download the latest version of Kafka.
 Extract the downloaded Kafka tar file.
 
 2.Start Kafka
-    Start Zookeeper:
-    Kafka uses Zookeeper to manage distributed configurations. 
+Start Zookeeper:
+Kafka uses Zookeeper to manage distributed configurations. 
 
 Start Zookeeper first.
 
 command:
+
     bin/zookeeper-server-start.sh config/zookeeper.properties
 
 Start Kafka Server:
-
-    Open another terminal and start the Kafka broker.
-command
-    bin/kafka-server-start.sh config/server.properties
-
-3.Create a Topic
-    Create a Kafka Topic:
-    You can create a topic named test with the following command:
+Open another terminal and start the Kafka broker.
 
 command:
+
+    bin/kafka-server-start.sh config/server.properties
+  
+3.Create a Topic
+Create a Kafka Topic:
+You can create a topic named test with the following command:
+
+command:
+
     bin/kafka-topics.sh --create --topic test --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
 
 List Topics:
-    Verify that the topic was created by listing all topics.
+Verify that the topic was created by listing all topics.
 
 command:
+
     bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
 4.Produce Messages to Kafka
-
 Start a Producer:
-    Send messages to the test topic using a Kafka producer.
+Send messages to the test topic using a Kafka producer.
 
 Command:
+
     bin/kafka-console-producer.sh --topic test --bootstrap-server localhost:9092
-    Type your messages and press Enter to send them.
+
+Type your messages and press Enter to send them.
 
 5.Consume Messages from Kafka
-
 Start a Consumer:
-    Read messages from the test topic using a Kafka consumer.
-Command:
-    bin/kafka-console-consumer.sh --topic test --bootstrap-server localhost:9092 --from-beginning
+Read messages from the test topic using a Kafka consumer.
 
+Command:
+
+    bin/kafka-console-consumer.sh --topic test --bootstrap-server localhost:9092 --from-beginning
 
 6.Stop Kafka and Zookeeper
 
 Stop Kafka:
+
     Press Ctrl+C in the terminal where the Kafka broker is running.
 
 Stop Zookeeper:
+
     Press Ctrl+C in the terminal where Zookeeper is running.
 
 
